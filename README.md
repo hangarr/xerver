@@ -1,10 +1,10 @@
 # xerver 
 ## Express server core for simple xerver app framework
 This package includes the Express server code and other packages for the 
-simple xerver app framework.
+simple **xerver** app framework.
 
 ## Standalone use
-The core xerver package can be used standalone for demo purposes.  The do so the user must supply several types of configuration information.
+The core **xerver** package can be used standalone for demo purposes.  The do so the user must supply several types of configuration information.
 
 ### Certificate for HTTPS SSL/TLS
 The standalone demo module `xerver.js` looks for the key and certificate information in two files in a folder in the project that is not stored in the GitHub repo:
@@ -19,7 +19,7 @@ https://nodejs.org/api/tls.html
 ```
 
 ### Environment variables
-The demo app which returns the node version uses Basic Authentication.  The environment variables that the app in the the xerver package uses can be set up with a BASH shell file, e.g. `default_env.sh` that includes the following commands
+The builtin demo app which returns the node version uses Basic Authentication.  The environment variables that the app in the **xerver** package uses can be set up with a BASH shell file, e.g. `default_env.sh` that includes the following commands
 ```
 #!/bin/sh
 #
@@ -34,7 +34,7 @@ $ source ./default_env.sh
 ```
 
 ### Starting the server standalone
-The Express server in the core xerver package can be started with the command
+The Express server in the core **xerver** package can be started with the command
 ```
 $ node xerver.js
 ```
@@ -56,7 +56,7 @@ curl -i -k -X GET http://localhost:3000/xerver-app/nodeversion -H "Content-Type:
 ```
 
 ## Use as a dependency
-The xerver core package can also be used as a dependency inside a test package provides an `api.js` module. 
+The **xerver** core package can also be used as a dependency inside a test package that provides an `api.js` module. 
 
 ### Including in a test package
 The handler `function()` in the Express `app.use()` and `route.use()` methods described here:
