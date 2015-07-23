@@ -23,8 +23,8 @@ The demo app which returns the node version uses Basic Authentication.  The envi
 ```
 #!/bin/sh
 #
-export XERVER_ID=<i>id_string</i>
-export XERVER_TOKEN=<i>token_string</i>
+export XERVER_ID=<id_string>
+export XERVER_TOKEN=<token_string>
 #
 export PORT=3000
 ```
@@ -43,13 +43,16 @@ $ node xerver.js
 The basic server and test API to get the Node.js server version can be tested using the following cURL commands:
 ```
 # public static endpoint test
-curl -i -k -X GET http://localhost:3000 -H "Content-Type: application/json" -u <i>id_string</i>:<i>token_string</i>
+curl -i -k -X GET http://localhost:3000 -H "Content-Type: application/json" \
+     -u <id_string>:<token_string>
 
 # trigger for default route
-curl -i -k -X GET http://localhost:3000/x -H "Content-Type: application/json" -u <i>id_string</i>:<i>token_string</i>
+curl -i -k -X GET http://localhost:3000/x -H "Content-Type: application/json" \
+     -u <id_string>:<token_string>
 
 # nodeversion endpoint test
-curl -i -k -X GET http://localhost:3000/xerver-app/nodeversion -H "Content-Type: application/json" -u <i>id_string</i>:<i>token_string</i>
+curl -i -k -X GET http://localhost:3000/xerver-app/nodeversion -H "Content-Type: application/json" \
+     -u <id_string>:<token_string>
 ```
 
 ## Use as a dependency
